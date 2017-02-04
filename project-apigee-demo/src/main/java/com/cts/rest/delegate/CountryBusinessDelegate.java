@@ -31,6 +31,8 @@ public class CountryBusinessDelegate {
 	public CityDetailResponse getCityDetails(CountryName countryName) {
 
 		GlobalWeather globalWeather = new GlobalWeather();
+		
+		
 		GlobalWeatherSoap globalWeatherSoap = globalWeather.getGlobalWeatherSoap();
 		String city = globalWeatherSoap.getCitiesByCountry(countryName.getCountryNm());
 		CityDetailResponse cityDetailResponse = new CityDetailResponse();
